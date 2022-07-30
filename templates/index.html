@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+	/*set border to the form*/
+	
+	form {
+        display: block;
+		border: 3px solid #f1f1f1;
+        text-align: center;
+        width: 50vw;
+        margin-left : 25vw;
+	}
+	/*assign full width inputs*/
+	
+	input[type=text],
+	input[type=password] {
+		width: 55%;
+        align-items: center;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: inline-block;
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+	/*set a style for the buttons*/
+	
+	button {
+		background-color: #020489;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 31%;
+	}
+	/* set a hover effect for the button*/
+	
+	button:hover {
+		opacity: 0.8;
+	}
+
+	/*set padding to the container*/
+	
+	.container {
+		padding: 16px;
+        
+    }
+	
+	
+
+</style>
+
+<body>
+
+	<h2 style="text-align: center;color: rgb(25, 25, 132); font-family:Verdana;font-size:xx-large ;">Stress Alerter</h2>
+	<form action="/submit" method="post">
+		<div class="container">
+            <img src="https://www.svgrepo.com/show/14910/eye-tracking.svg" style="width:200px"><br>
+			<label ><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="uname" required><br>
+<!--type: specifies value of inp field  placeholder: value inside the input container  name: specifies name var in JS-->
+<!--required: boolean attribute,specifies inp field must be filled before submitting the form-->		
+            <label><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required><br>
+
+			<button type="submit">Login</button><br>
+			<input type="checkbox" checked="checked"> Remember me
+		</div>
+
+	
+	</form>
+</body>
+
+</html>
