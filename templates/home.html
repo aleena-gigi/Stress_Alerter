@@ -6,17 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stress Alerter </title>
 </head>
+<style>
+    h1{
+        text-align: center;
+        color: rgb(11, 11, 63);
+      }
+  	button {
+		background-color: #020489;
+		color: white;
+		padding: 14px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 31%;
+	}
+	/* set a hover effect for the button*/
+	
+	button:hover {
+		opacity: 0.8;
+	}
+
+</style>
 <body>
     <h1><b>Stress Alerter</b></h1>
     <h2>Hi {{uname}}</h2>
-    <button>Track</button>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8  offset-lg-2">
-                <h3 class="mt-5">Live Streaming</h3>
-                <img src="{{ url_for('video') }}" width="100%"/>
-            </div>
-        </div>
+    <form action="/track/"  method="POST">
+        <button type="submit">Track</button>
+    </form> 
+    <div>
+        {{ message }}
     </div>
-</body>
+    <div>
+         <h3 class="mt-5">Live Streaming</h3>
+          <img src="{{ url_for('video') }}" width="50%"> 
+    </div>
+ </body>
 </html>
